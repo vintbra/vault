@@ -1,7 +1,8 @@
 {
   "name": "vault",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "author": "Stormers",
   "devDependencies": {
     "react-scripts": "0.9.3"
   },
