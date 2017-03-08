@@ -1,19 +1,24 @@
 {
   "name": "vault",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": "Stormers",
   "devDependencies": {
     "react-scripts": "0.9.3"
   },
   "dependencies": {
+    "express": "^4.15.2",
+    "pkgcloud": "^1.4.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "socketio": "^1.0.0",
+    "uws": "^0.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:server": "node server"
   }
 }
