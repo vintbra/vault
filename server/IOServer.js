@@ -22,9 +22,9 @@ class IOServer {
     io.on('connection', (socket) => {
 
       socket.on('vault:get_containers', (data, fn) => {
-        
+
         const options = {
-          limit: data.limit || 10,
+          limit: data.limit || 10000,
           marker: data.marker || null,
           end_marker: data.end_marker || null
         }
@@ -33,8 +33,8 @@ class IOServer {
           if (err) { console.log(err); }
           else {
             fn(containers
-              // .filter((container) => { return !container.name.startsWith('.') })
-              .map((container) => { 
+              .filter((container) => { return !container.name.startsWith('.') })
+              .map((container) => {
                 return {
                   name: container.name,
                   count: container.count,
